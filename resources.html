@@ -2408,7 +2408,53 @@
       pointer-events: auto !important;
     }
 
+  
+    /* === PILLAR CARDS: match original Chieder1.html style === */
+    .pillar-card {
+      background: white !important;
+      padding: 2.5rem 1.75rem !important;
+      border-radius: 20px !important;
+      border: 1px solid rgba(27,42,107,0.04) !important;
+      box-shadow: 0 6px 24px rgba(27,42,107,0.05) !important;
+      overflow: visible !important;
+      position: relative !important;
+    }
+    .pillar-card::before { display: none !important; }
+    .pillar-card:hover {
+      transform: translateY(-6px) !important;
+      box-shadow: 0 20px 48px rgba(27,42,107,0.1) !important;
+      border-bottom: 1px solid rgba(27,42,107,0.04) !important;
+    }
+    .pillar-circle {
+      width: 88px !important; height: 88px !important;
+      border-radius: 50% !important;
+      margin: 0 auto 1.4rem !important;
+      display: flex !important; align-items: center !important; justify-content: center !important;
+    }
+    .pillar-card:hover .pillar-circle { transform: scale(1.06) rotate(-4deg) !important; }
+    .pillar-card:nth-child(1) .pillar-circle { background: linear-gradient(135deg, var(--royal), var(--sky)) !important; }
+    .pillar-card:nth-child(2) .pillar-circle { background: linear-gradient(135deg, var(--teal), var(--teal-light)) !important; }
+    .pillar-card:nth-child(3) .pillar-circle { background: linear-gradient(135deg, var(--gold), var(--gold-bright)) !important; }
+    .pillar-card:nth-child(4) .pillar-circle { background: linear-gradient(135deg, var(--coral), var(--coral-soft)) !important; }
+    .pillar-card:nth-child(5) .pillar-circle { background: linear-gradient(135deg, var(--lavender), var(--lavender-soft)) !important; }
+    .pillar-card:nth-child(6) .pillar-circle { background: linear-gradient(135deg, var(--royal-light), var(--teal)) !important; }
+    .pillar-circle svg { width: 36px !important; height: 36px !important; stroke: white !important; stroke-width: 1.6 !important; fill: none !important; }
+    .pillar-card:nth-child(1) .pillar-circle svg,
+    .pillar-card:nth-child(2) .pillar-circle svg,
+    .pillar-card:nth-child(3) .pillar-circle svg,
+    .pillar-card:nth-child(4) .pillar-circle svg,
+    .pillar-card:nth-child(5) .pillar-circle svg,
+    .pillar-card:nth-child(6) .pillar-circle svg { stroke: white !important; }
+
   </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-69DPB1T992"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-69DPB1T992');
+</script>
 </head>
 <body>
 
