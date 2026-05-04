@@ -2446,6 +2446,177 @@
     .pillar-card:nth-child(5) .pillar-circle svg,
     .pillar-card:nth-child(6) .pillar-circle svg { stroke: white !important; }
 
+  
+    /* ===============================================
+       ANDROID MOBILE FIX — centering & sizing
+       =============================================== */
+    @media (max-width: 768px) {
+      /* Global: prevent anything from overflowing right */
+      body, html { overflow-x: hidden !important; }
+      * { max-width: 100vw !important; box-sizing: border-box !important; }
+
+      /* 1. Carousel: single video, centered */
+      .carousel-section { padding: 2rem 1rem !important; overflow: hidden !important; }
+      .carousel-head h2 { 
+        font-size: 1.3rem !important; 
+        white-space: normal !important; 
+        text-align: center !important; 
+      }
+      .carousel-track {
+        position: relative !important;
+        aspect-ratio: 16/9 !important;
+        overflow: hidden !important;
+        border-radius: 12px !important;
+        display: block !important;
+      }
+      .video-tile {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        min-width: 100% !important;
+        flex: none !important;
+        opacity: 0 !important;
+        border-radius: 12px !important;
+      }
+      .video-tile.active { opacity: 1 !important; }
+      .carousel-arrow { display: flex !important; }
+      .carousel-dots { display: flex !important; }
+
+      /* 2. Growth section: centered, no shift right */
+      .growth-section { 
+        padding: 2rem 1rem !important; 
+        overflow: hidden !important; 
+      }
+      .growth-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 1.5rem !important;
+        max-width: 100% !important;
+      }
+      .growth-divider { display: none !important; }
+      .growth-text { 
+        width: 100% !important; 
+        text-align: center !important; 
+        padding: 0 !important;
+      }
+      .growth-text h2 { 
+        text-align: center !important; 
+        font-size: 1.5rem !important;
+        white-space: normal !important;
+      }
+      .growth-text .growth-intro { text-align: center !important; }
+      .growth-list { text-align: left !important; padding-left: 0 !important; }
+      .growth-list li { text-align: left !important; }
+      .growth-section .hero-flywheel {
+        max-width: 280px !important;
+        width: 280px !important;
+        margin: 0 auto !important;
+        justify-self: center !important;
+      }
+
+      /* 3. Mission: How we kindle on one line, smaller cards */
+      .mission { overflow: hidden !important; }
+      .mission-inner { padding: 2.5rem 1rem 2rem !important; }
+      .mission-pillars-header { padding: 1.2rem 1rem !important; }
+      .mission-pillars-divider { 
+        font-size: 1.2rem !important; 
+        white-space: nowrap !important; 
+      }
+      .pillars-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.6rem !important;
+        padding: 1rem 0.8rem !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+      }
+      .pillar-card {
+        padding: 1.2rem 0.6rem !important;
+        border-radius: 14px !important;
+        text-align: center !important;
+      }
+      .pillar-circle {
+        width: 52px !important;
+        height: 52px !important;
+        margin: 0 auto 0.8rem !important;
+      }
+      .pillar-circle svg {
+        width: 24px !important;
+        height: 24px !important;
+      }
+      .pillar-card h3 {
+        font-size: 0.78rem !important;
+        line-height: 1.3 !important;
+      }
+
+      /* 4. Reb Shayala: centered */
+      .shayala { overflow: hidden !important; }
+      .shayala-inner { 
+        padding: 2rem 1rem !important; 
+        text-align: center !important;
+      }
+      .shayala-hero { text-align: center !important; }
+      .shayala-hero h2 { text-align: center !important; }
+      .shayala-hero p { text-align: center !important; }
+      .shayala-body {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 1.5rem !important;
+      }
+      .shayala-text { 
+        text-align: center !important; 
+        width: 100% !important;
+        padding: 0 !important;
+      }
+      .shayala-text h3 { text-align: center !important; }
+      .shayala-text p { text-align: center !important; }
+      .shayala-quote { 
+        text-align: center !important;
+        border-left: none !important;
+        border-top: 2px solid var(--gold) !important;
+        padding-left: 0 !important;
+        padding-top: 0.8rem !important;
+      }
+      .shayala-portrait-card {
+        max-width: 260px !important;
+        margin: 0 auto !important;
+      }
+
+      /* Transition bands */
+      .transition-band { padding: 2rem 1rem !important; overflow: hidden !important; }
+      .transition-band h2 { font-size: 1.3rem !important; }
+
+      /* Cards full width */
+      .carousel-section,
+      .growth-section,
+      .transition-band,
+      .mission,
+      .shayala,
+      .leadership,
+      .resources,
+      .finances,
+      .contact,
+      footer {
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border-radius: 0 !important;
+      }
+
+      /* Leadership & Resources */
+      .leadership { padding: 2rem 1rem !important; overflow: hidden !important; }
+      .leadership-grid { gap: 0.8rem !important; }
+      .resources { padding: 2rem 1rem !important; overflow: hidden !important; }
+      .resources-grid { gap: 0.8rem !important; }
+      .finances { padding: 2rem 1rem !important; overflow: hidden !important; }
+      .contact { padding: 2rem 1rem !important; overflow: hidden !important; }
+    }
+
   </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-69DPB1T992"></script>
